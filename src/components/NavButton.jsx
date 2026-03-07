@@ -1,8 +1,18 @@
 import React from 'react'
+import { useActions } from '../context/ActionContext'
 
-const NavButton = () => {
+function Direction({text}) {
+  const {onNextQuestion, onPreviousQuestion} = useActions();
+
+  if(text == '< Previous') {
+    return <button onClick={() => onPreviousQuestion()} className='hover:underline cursor-pointer'>{text}</button>
+  }
+  return <button onClick={() => onNextQuestion()} className='hover:underline cursor-pointer'>{text}</button>
+}
+
+const NavButton = ({text}) => {
   return (
-    <div>NavButton</div>
+    <Direction text={text} />
   )
 }
 

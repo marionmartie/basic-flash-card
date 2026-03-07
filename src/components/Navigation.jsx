@@ -4,10 +4,12 @@ import ShowAnswer from './ShowAnswer'
 
 const Navigation = () => {
   return (
-    <div className="flex justify-between">
-        <NavButton />
+    <div className="flex justify-between border py-2 px-4 rounded-md border-gray-400">
+        <NavButton text="< Previous" />
+
         <ShowAnswer />
-        <NavButton />
+
+        <NavButton text="Next >" />
     </div>
   )
 }
