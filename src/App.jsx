@@ -8,6 +8,8 @@ import { ActionContext } from './context/ActionContext'
 const App = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isAnswerShown, setIsAnswerShown] = useState(false);
+  const [part, setPart] = useState(1);
+  const [percentage, setPercentage] = useState((part / questions.length) * 100);
 
   let shuffleQuestionIds = (array) => {
     const shuffledArray = [...array];
@@ -30,14 +32,33 @@ const App = () => {
   }
 
   const actions = {
-    onNextQuestion: () => currentIndex < shuffledIds.length - 1 ? setCurrentIndex(currentIndex + 1) : '',
-    onPreviousQuestion: () => currentIndex > 0 ? setCurrentIndex(currentIndex - 1) : console.log(currentIndex),
+    onNextQuestion: () => {
+      if (currentIndex < shuffledIds.length - 1) {
+        const nextPart = part + 1;
+
+        setPart(nextPart)
+        setPercentage((nextPart / shuffledIds.length) * 100)
+        setCurrentIndex(currentIndex + 1)
+      }
+    },
+    onPreviousQuestion: () =>  {
+      if (currentIndex > 0) {
+        const prevPart = part - 1
+
+        setPart(prevPart);
+        setPercentage((prevPart / shuffledIds.length) * 100)
+        setCurrentIndex(currentIndex - 1);
+      }
+    },
   }
 
   return (
     <>
       <div className='max-w-5xl mx-auto my-12 p-4'>
-        <ProgressBar />
+        <ProgressBar 
+          questionNumber={currentIndex} 
+          totalQuestion={questions.length}
+          percentage={percentage} />
         <Question currentQuestion={currentQuestion} showAnswer={isAnswerShown} />
         <ActionContext.Provider value={actions}>
           <Navigation handleShowAnswer={showAnswer} showAnswer={isAnswerShown} />

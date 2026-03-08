@@ -58,5 +58,65 @@
     "question": "What is the name of the fairy in the story of Peter Pan?",
     "answer": "Tinker Bell",
     "category": "Entertainment"
+  },
+  {
+    "id": 10,
+    "question": "What is the smallest country in the world by area?",
+    "answer": "Vatican City",
+    "category": "Geography"
+  },
+  {
+    "id": 11,
+    "question": "Who wrote 'To Kill a Mockingbird'?",
+    "answer": "Harper Lee",
+    "category": "Literature"
+  },
+  {
+    "id": 12,
+    "question": "What is the speed of light in a vacuum?",
+    "answer": "299,792,458 meters per second",
+    "category": "Science"
+  },
+  {
+    "id": 13,
+    "question": "In which country did the Industrial Revolution begin?",
+    "answer": "England",
+    "category": "History"
+  },
+  {
+    "id": 14,
+    "question": "How many chromosomes do humans have?",
+    "answer": "46",
+    "category": "Biology"
+  },
+  {
+    "id": 15,
+    "question": "Who sculpted the statue of David?",
+    "answer": "Michelangelo",
+    "category": "Art"
+  },
+  {
+    "id": 16,
+    "question": "What is the atomic number of Carbon?",
+    "answer": "6",
+    "category": "Chemistry"
+  },
+  {
+    "id": 17,
+    "question": "How many moons does Jupiter have?",
+    "answer": "95",
+    "category": "Astronomy"
+  },
+  {
+    "id": 18,
+    "question": "What is the record for the fastest serve in tennis?",
+    "answer": "263 km/h (163 mph)",
+    "category": "Sports"
+  },
+  {
+    "id": 19,
+    "question": "In which decade was Netflix founded?",
+    "answer": "1990s",
+    "category": "Entertainment"
   }
 ]
