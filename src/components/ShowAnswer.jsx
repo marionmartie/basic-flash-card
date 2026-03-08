@@ -1,8 +1,10 @@
 import React from 'react'
 
-const ShowAnswer = () => {
+const ShowAnswer = ({handleClick, isAnswerShown}) => {
   return (
-    <div>Show Answer</div>
+    <button onClick={handleClick}>
+      {isAnswerShown ? 'Show Answer' : 'Show Question'}
+    </button>
   )
 }
 

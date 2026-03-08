@@ -11,8 +11,12 @@ function Direction({text}) {
 }
 
 const NavButton = ({text}) => {
+  const {onNextQuestion, onPreviousQuestion} = useActions();
+
+  const handleOnClick = text === '< Previous' ? onPreviousQuestion : onNextQuestion;
+  
   return (
-    <Direction text={text} />
+    <button onClick={handleOnClick} className='hover:underline cursor-pointer'>{text}</button>
   )
 }
 
